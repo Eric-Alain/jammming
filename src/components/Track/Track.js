@@ -1,7 +1,6 @@
 import React from 'react';
 import './Track.css';
 
-
 class Track extends React.Component {
     constructor(props) {
         super(props);
@@ -28,12 +27,14 @@ class Track extends React.Component {
 
     render() {
         return (
-            <div className="Track">
-                <div className="Track-information">
-                    <h3>{this.props.track.name}</h3>
-                    <p>{this.props.track.artist.name} | {this.props.track.album}</p>
+            <div>
+                <div className="Track">
+                    <div className="Track-information">                    
+                        <h3>{this.props.track.name}</h3>
+                        <p>{this.props.track.artist.name} | {this.props.track.album}</p>
+                    </div>
+                    {this.renderAction()}
                 </div>
-                {this.renderAction()}
             </div>
         )
     }

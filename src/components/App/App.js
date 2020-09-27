@@ -4,6 +4,14 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import Spotify from '../../util/Spotify';
+
+// Fontawesome imports for global use
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab }  from '@fortawesome/free-brands-svg-icons';
+import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faPlay, faPause);
+
 Spotify.getAccessToken();
 
 class App extends React.Component {
